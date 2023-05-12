@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="dataSource" class="dependency_injection.jdbc.MyDataSource">
+        <property name="driver">
+<!--            null can not appear inside value, it should exist alone-->
+            <null/>
+        </property>
+        <property name="username" value="a>b"></property>
+        <property name="url" value="localhost:3000"></property>
+        <property name="password" value="123456"></property>
+    </bean>
+</beans>

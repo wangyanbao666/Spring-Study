@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="pl" class="dependency_injection.Beans.ProgrammingLanguage">
+        <property name="types">
+            <array>
+                <value>c</value>
+                <value>java</value>
+                <value>python</value>
+            </array>
+        </property>
+        <property name="rating">
+            <map>
+                <entry key="python" value="5"></entry>
+                <entry key="java" value="4"></entry>
+                <entry key="c" value="3"></entry>
+            </map>
+        </property>
+    </bean>
+</beans>
